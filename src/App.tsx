@@ -4,11 +4,11 @@ import './styles/theme.css'
 import './styles/global.css'
 
 export function App() {
-  console.log('Oi');
-
+  
   return (
     <>
-      <Heading/>
+      <Heading attr={123}>Olá, Mundo!</Heading>
+      
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
         reprehenderit placeat autem cupiditate eaque deserunt iste quibusdam
@@ -24,3 +24,5 @@ export function App() {
 // <> </> são chamados de react fragment é usados qunado não se quer usar um elemento pai (ex.: div)
 // um componente no react é basicamente uma função (function), bem parecido com js   
 // import funciona como "links"
+// <Heading>Olá, Mundo!</Heading> agora o heading está fechando a tag pq o "Olá, Mundo!" é u  children (filho)
+// attr é meu "atributo" pode ser pra Number, String...

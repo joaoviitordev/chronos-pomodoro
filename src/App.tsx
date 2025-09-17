@@ -1,9 +1,14 @@
+import { Heading } from "./components/Heading";
+
+import './styles/theme.css'
+import './styles/global.css'
+
 export function App() {
   console.log('Oi');
 
   return (
     <>
-      <h1>Olá, Mundo!</h1>
+      <Heading/>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
         reprehenderit placeat autem cupiditate eaque deserunt iste quibusdam
@@ -18,3 +23,4 @@ export function App() {
 // elemento filho solto ex.: h1 e p precisam ser envelopados por div ou <> </>
 // <> </> são chamados de react fragment é usados qunado não se quer usar um elemento pai (ex.: div)
 // um componente no react é basicamente uma função (function), bem parecido com js   
+// import funciona como "links"

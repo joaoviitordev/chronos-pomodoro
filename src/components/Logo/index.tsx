@@ -1,0 +1,26 @@
+import styles from './styles.module.css';
+import { TimerIcon } from 'lucide-react'
+
+
+export function Logo() {
+  return <div className={styles.logo}>
+    <a className={styles.logoLink} href="#">
+      <TimerIcon />
+      <span>Chronos</span>
+    </a>
+  </div>; 
+}
+
+// no jsx não se usa class dentro de um elemento por ex.: <h1 class="">
+// isso porque class é uma palavra reservada do javascript e não pode
+// se usada em jsx, o que substitui isso é className
+// className={styles.xxx} desse modo não terá conflito de classes!!!
+// usando const para criar uma "variavel" fica mais facil de para colocar tudo na className
+// logo, é possivel usar mais de uma classe em um componente
+// props é "propriedades do componente" ele é basicamente uma "vazio"
+// {props.children} é javascript ele ta diretamente ligado com o <Logo>Olá, Mundo!</Logo>
+// já que o "Olá, Mundo!" é children de logo
+
+// type LogoProps = { // minha tipagem, faz o erro do props na function sumir
+//  children: React.ReactNode; // tudo que o react aceita como children é desse tipo React.ReactNode
+// }

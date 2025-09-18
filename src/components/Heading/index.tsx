@@ -1,6 +1,11 @@
-import styles from './Heading.module.css';
+import styles from './styles.module.css';
 
-export function Heading(props) {
+type HeadingProps = { // minha tipagem, faz o erro do props na function sumir
+  children: React.ReactNode; // tudo que o react aceita como children é desse tipo React.ReactNode
+}
+
+
+export function Heading(props: HeadingProps ) {
     const classes = `${styles.cyan} ${styles.heading}` // "classes" css
   return <h1 className={classes}>{props.children}</h1>; //componente className
 }

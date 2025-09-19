@@ -1,8 +1,10 @@
-export function Footer (){
+import styles from './styles.module.css'
+
+export function Footer () {
   return (
     <>
-    <a href="#">Entenda a técnica pomodoro</a>
-    <a href="#">Chronos Pomodoro  </a>
+    <a className={styles.footer} href="#">Entenda a técnica pomodoro 🍅</a>
+    <a className={styles.footer} href="https://github.com/joaoviitordev/chronos-pomodoro" target='_blank'>Repositório desse projeto!</a>
     </>
   );
 }

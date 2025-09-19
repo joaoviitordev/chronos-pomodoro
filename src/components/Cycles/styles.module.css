@@ -1,0 +1,47 @@
+.cycle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 14px;
+}
+
+.cycleDots {
+  display: flex;
+  gap: 10px;
+}
+
+.cycleDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.workTime {
+  background-color: #A60303;
+}
+
+.workTime:hover{
+  background-color: #F20519;
+  transition: background-color .4s;
+}
+
+.shortBreakTime{
+  background-color: #D9A404;
+}
+
+.shortBreakTime:hover{
+  background-color: #F2CB05;
+  transition: background-color .4s;
+}
+
+.longBreakTime{
+  background-color: #17447E;
+}
+
+.longBreakTime:hover{
+  background-color: #3082ED;
+  transition: background-color .4s;
+}

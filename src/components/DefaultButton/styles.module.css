@@ -1,0 +1,31 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 40px;
+  background-color: #F20519;
+  border-radius: 5px;
+  border: transparent;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #A60303;
+  transition: background-color .4s;
+}
+
+.button svg {
+  width: 32px;
+  height: 32px;
+}
+
+.red{
+  background-color: #F20519;
+}
+
+.yellow{
+  background-color: #F2CB05;
+}

@@ -15,11 +15,18 @@ body{
     color: var(--text-default);
 }
 
-.container{
-    max-width: 980px;
-    margin: 0 auto;
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.content{
-    margin: 32px;
+.formRow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
 }

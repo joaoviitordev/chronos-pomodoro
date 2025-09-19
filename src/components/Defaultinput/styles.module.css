@@ -1,0 +1,32 @@
+.input {
+  background-color: transparent;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 18px;
+  color: #e6e9f0;
+  height: 32px;
+  border: 2px solid transparent;
+  outline: none;
+  border-bottom: 2px solid #F20519;
+}
+
+.input::placeholder{
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.input:focus{
+  border: 2px solid #F20519;
+  transition: border .5s;
+}
+
+.labelText{
+  font-size: 18px;
+  color: #e6e9f0;
+  font-weight: 600;
+}
+
+.input:disabled {
+  border-bottom: 2px solid var(--disabled);
+  color: var(--text-muted);
+}

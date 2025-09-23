@@ -37,3 +37,16 @@ OBS.: TaskStateModel todo o estado global da aplicação vai ser dessa maneira, 
 porque depois ele será usado em outras coisas e vai ser movido atraves de um "context" uma propriedade do react,
 mas antes disso será usado o useState, porque se não for usado esse context ai teria que fazer um useState
 para cada uma dessas "propriedades".
+
+export type TaskStateModel = {
+  tasks: TaskModel[]; // Onde será usado: histórico, MainForm
+  secondsRemaining: number; // Onde será usado: Home, CountDown, MainForm, Button, Histórico
+  formattedSecondsRemaining: string; // Onde será usado: Título, CountDown
+  activeTask: TaskModel | null; // Onde será usado: CountDown, MainForm, Button, Histórico
+  currentCycle: number; // Onde será usado: Home
+  config:{
+    workTime: number; // Onde será usado: MainForm
+    shortBreakTime: number; // Onde será usado: MainForm
+    longBreakTime: number; // Onde será usado: MainForm
+  }
+}

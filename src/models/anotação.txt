@@ -1,0 +1,39 @@
+Essa pasta vai servir para a modelagem da aplicação.
+
+-TaskModel.ts, será a parte de hitórico da página onde o usuário vai ver:
+
+1- A task (tarefa);
+2- Duração da task (em minutos);
+3- A data (dia/mês/ano) e hora que foi feita a task;
+4- O seu status de concluida ou interrompida
+5- O tipo da task (descanso longo ou curto e "trabalho")
+
+Obs.: Trabalho é uma forma generica de dizer que algo foi feito.
+
+Explicando TaskModel.ts:
+
+name = nome da task
+duration = duração da task
+startDate = data de inicio da task (dia/mês/ano) e o horário
+completeDate = "number | null" o number representa quando a task é concluida o null é quando a task não é concluida
+interruptDate = "number | null" o interruptDate está diretamente ligado ao completeDate, quando este for null no completeDate quer dizer que houve uma interrupção, logo, o interruptDate entra em ação na aplicação, interruptDate será number represantando a hora em que a task foi interrompida, quando o completeDate for number quer dizer que a task foi concluida, logo, não teve interrupção,
+então, o interruptDate será null (vazio).
+type = 'workTime' | 'shortBreakTime' | 'longBreakTime' representa o tipo que foi a task
+
+TaskStateModel, faz parte do histórico da página
+
+1- tasks: TaskModel[]; é um array que vai ser as tasks
+2- secondsRemaining: number; faz parte do contador na página home
+3- formattedSecondsRemaining: string; é a formatação do secondsRemaining para a forma de string
+4- activeTask: TaskModel | null; será a task que está ativa ou não
+5- currentCycle: number; são as bolinhas de ciclo para saber qual ciclo está (vai de 1 a 8)
+6- config: { parte de configuração da página
+    workTime: number;
+    shortBreakTime: number;
+    longBreakTime: number; 
+    }
+
+OBS.: TaskStateModel todo o estado global da aplicação vai ser dessa maneira, tudo isso vai ser um objeto!
+porque depois ele será usado em outras coisas e vai ser movido atraves de um "context" uma propriedade do react,
+mas antes disso será usado o useState, porque se não for usado esse context ai teria que fazer um useState
+para cada uma dessas "propriedades".

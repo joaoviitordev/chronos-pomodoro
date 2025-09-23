@@ -1,11 +1,11 @@
-:root{
-  --text-default: #e6e9f0;
+:root[data-theme='light'] {
+  --background: #D9D9D9;
+  --text-default: black;
 }
 
-:root[data-theme='light'] {
-  --text-default: #0a0f1a;
-
-
+:root{
+  --text-default: #e6e9f0;
+  --background: #262626;
 }
 
 /* vermelho para testar como primary #F20519 
